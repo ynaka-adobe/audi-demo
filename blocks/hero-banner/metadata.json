@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-02-18T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.audiusa.com/en/",
+    "originPage": "Audi USA homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "promotional-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + subheading + CTAs",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "automotive homepage banners",
+      "promotional hero sections with full-width images",
+      "product launch announcements"
+    ],
+    "notSuitableFor": [
+      "text-only hero sections",
+      "hero sections without background images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-18T05:40:00.000Z"
+  }
+}

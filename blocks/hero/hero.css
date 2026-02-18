@@ -1,15 +1,15 @@
 .hero {
-  --gradient-start: rgb(var(--color-dark-base) / 80%);
-  --gradient-end: rgb(var(--color-dark-base) / 20%);
-  --default-min-height: 360px;
+  --gradient-start: rgb(var(--color-dark-base) / 85%);
+  --gradient-end: rgb(var(--color-dark-base) / 30%);
+  --default-min-height: 400px;
   --min-height: var(--default-min-height);
 
   position: relative;
-  color: #fff;
+  color: var(--color-white);
   overflow: hidden;
 
   &.small {
-    --min-height: 180px;
+    --min-height: 240px;
   }
 
   &.large {
@@ -21,7 +21,7 @@
   }
 
   &.light {
-    --gradient-start: rgb(var(--color-light-base) / 80%);
+    --gradient-start: rgb(var(--color-light-base) / 85%);
 
     color: var(--color-dark);
   }
@@ -66,7 +66,6 @@
     }
 
     > div {
-      /* Used for quiet-background */
       background-color: var(--color-background);
       position: absolute;
       inset: 0;
@@ -91,6 +90,12 @@
 
     p {
       margin: 8px 0;
+      color: var(--color-white-secondary);
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--color-white);
+      font-weight: 400;
     }
 
     .fg-text {
@@ -124,12 +129,12 @@
     }
 
     .hero-foreground {
-      background: #111;
+      background: var(--color-surface-dark);
     }
 
     &.light {
       .hero-foreground {
-        background: #f9f9f9;
+        background: var(--color-white);
       }
     }
 

@@ -1,0 +1,32 @@
+{
+  "templates": [
+    {
+      "name": "audi-homepage",
+      "urls": ["https://www.audiusa.com/en/"],
+      "description": "Audi USA homepage with hero banners, model grid, featured cards, inventory teaser, and editorial teasers",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": ["div[class*='StageContainer__StageContainerWrap']"]
+        },
+        {
+          "name": "cards-model",
+          "instances": ["div[class*='LeanMoxxView__Layout']"]
+        },
+        {
+          "name": "cards-featured",
+          "instances": ["div[class*='StyledContentTileContainer']"]
+        },
+        {
+          "name": "columns-teaser",
+          "instances": ["div[class*='BasicTeaser__StyledContainer']"]
+        },
+        {
+          "name": "section-dark",
+          "instances": ["div[class*='LeanMoxxView']", "div[class*='StyledContentTileContainer']"],
+          "section": "dark"
+        }
+      ]
+    }
+  ]
+}

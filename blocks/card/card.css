@@ -2,11 +2,12 @@
   --spacing-default: var(--spacing-l);
 
   overflow-wrap: break-word;
-  box-shadow: 0 1px 6px 0 rgb(0 0 0 / 12%);
+  box-shadow: var(--color-border) 0 0 0 1px inset;
   overflow: hidden;
-  background-color: light-dark(var(--color-gray-100), var(--color-gray-900));
-  color: light-dark(var(--color-dark), var(--color-light));
-  transition: all 0.25s ease-in-out;
+  background-color: var(--color-surface-dark);
+  color: var(--color-white);
+  border-radius: 0;
+  transition: all var(--transition-duration) var(--audi-easing);
 
   .card-inner {
     display: grid;
@@ -23,7 +24,7 @@
         position: absolute;
         inset: 0;
         opacity: 0.85;
-        transition: opacity 0.25s ease-in-out;
+        transition: opacity var(--transition-duration) var(--audi-easing);
       }
 
       img {
@@ -46,6 +47,10 @@
       margin-bottom: 0;
     }
 
+    p {
+      color: var(--color-white-secondary);
+    }
+
     &:has(+ .card-cta-container) {
       padding: var(--spacing-default) var(--spacing-default) var(--spacing-m) var(--spacing-default);
     }
@@ -59,8 +64,8 @@
   }
 
   &:not(.quiet):hover {
-    transform: scale(1.005);
-    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 16%);
+    box-shadow: var(--color-surface-medium) 0 0 0 1px inset;
+    background-color: var(--color-surface-medium);
 
     picture {
       opacity: 1;

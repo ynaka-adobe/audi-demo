@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-teaser",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-02-18T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.audiusa.com/en/",
+    "originPage": "Audi USA homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "content-teaser",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + subheading + 2 CTAs",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image + text teaser layouts",
+      "call-to-action sections with visual",
+      "inventory/search promotion sections"
+    ],
+    "notSuitableFor": [
+      "multi-row column layouts",
+      "columns without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-18T05:40:00.000Z"
+  }
+}
