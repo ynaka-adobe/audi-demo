@@ -1,7 +1,7 @@
-# Author Kit
-For projects that want a few more batteries. Built by the team who brought you da.live and adobe.com.
+# Document Authoring Demo for Audi USA
+The website https://www.audiusa.com/en/ has been converted to AEM Edge Delivery Services using Experience Modernization Agent.
 
-## Getting started
+## Steps
 
 ### 1. Github
 1. Use this template to make a new repo.
