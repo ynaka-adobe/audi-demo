@@ -6,6 +6,7 @@ For projects that want a few more batteries. Built by the team who brought you d
 ### 1. Github
 1. Use this template to make a new repo.
 1. Install [AEM Code Sync](https://da.live/bot).
+2. Install [AEM Code Connector](https://github.com/apps/aem-code-connector).
 
 ### 2. DA content
 1. Browse to https://da.live/start.
