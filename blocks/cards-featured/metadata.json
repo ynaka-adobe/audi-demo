@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-featured",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-02-18T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.audiusa.com/en/",
+    "originPage": "Audi USA homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "featured-content",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + CTA link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured content tiles with large images",
+      "promotional card grids",
+      "model highlight sections"
+    ],
+    "notSuitableFor": [
+      "small thumbnail grids",
+      "text-only card lists"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-18T05:40:00.000Z"
+  }
+}
