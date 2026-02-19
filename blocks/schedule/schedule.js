@@ -81,9 +81,17 @@ function getDate() {
   const now = Date.now();
   if (ENV === 'prod') return now;
 
+  const params = new URL(window.location.href).searchParams;
+
+  // date param accepts an ISO date/datetime string (e.g. ?date=2025-06-01T10:00:00)
+  const dateParam = params.get('date');
+  if (dateParam) {
+    const parsed = Date.parse(dateParam);
+    if (!Number.isNaN(parsed)) return parsed;
+  }
+
   // Attempt a simulated schedule
-  const sim = localStorage.getItem('aem-schedule')
-   || new URL(window.location.href).searchParams.get('schedule');
+  const sim = localStorage.getItem('aem-schedule') || params.get('schedule');
   return sim * 1000 || now;
 }
 
