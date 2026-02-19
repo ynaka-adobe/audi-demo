@@ -47,6 +47,121 @@
   height: 100%;
 }
 
+.hero-banner a.btn {
+  background-color: rgb(101 112 129 / 30%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-white);
+  border-radius: var(--button-border-radius);
+  box-shadow: none;
+  border: 0;
+}
+
+.hero-banner a.btn:hover {
+  background-color: rgb(101 112 129 / 50%);
+  box-shadow: none;
+}
+
+/* Plain undecorated links (no .btn class) inside hero-banner paragraphs */
+.hero-banner p > a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--button-height);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: rgb(101 112 129 / 30%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-white);
+  box-shadow: none;
+  border: 0;
+  transition: background var(--transition-base);
+}
+
+.hero-banner p > a:not(.btn):hover {
+  background-color: rgb(101 112 129 / 50%);
+}
+
+/* ========================================
+   Offer variant — Hero Banner (offer)
+   ======================================== */
+.hero-banner.offer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.hero-banner.offer h1,
+.hero-banner.offer h2,
+.hero-banner.offer h3,
+.hero-banner.offer h4,
+.hero-banner.offer h5,
+.hero-banner.offer h6 {
+  font-size: 60px;
+  line-height: 84px;
+  font-stretch: 130%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-banner.offer p {
+  font-size: 24px;
+  line-height: 36px;
+  font-stretch: 130%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center inline button paragraphs within their parent div */
+.hero-banner.offer > div > div:has(p > a:only-child) {
+  text-align: center;
+}
+
+/* Plain <a> links sole child of a <p> — frosted glass pill buttons */
+.hero-banner.offer p:has(> a:only-child) {
+  display: inline-flex;
+  margin: 0 8px 0 0;
+  max-width: unset;
+}
+
+.hero-banner.offer p:has(> a:only-child) a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--button-height);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: rgb(101 112 129 / 30%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-white);
+  box-shadow: none;
+  border: 0;
+  transition: background var(--transition-base);
+}
+
+.hero-banner.offer p:has(> a:only-child) a:hover {
+  background-color: rgb(101 112 129 / 50%);
+}
+
+/* btn-group (decorated links) and inline button paragraphs — centered row */
+.hero-banner.offer p.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 @media (width >= 900px) {
   .hero-banner {
     padding: 80px 32px;

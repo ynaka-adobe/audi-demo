@@ -1,37 +1,136 @@
+/* ========================================
+   Cards Featured — matches withFocusReset__FocusReset on audiusa.com
+   Full-bleed image cards with overlay title + frosted glass CTA
+   ======================================== */
+
 .cards-featured > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
+/* Card */
 .cards-featured > ul > li {
-  border: 1px solid var(--color-border);
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
   background-color: var(--color-surface-dark);
-  transition: border-color var(--transition-duration) var(--audi-easing);
 }
 
-.cards-featured > ul > li:hover {
-  border-color: var(--color-surface-medium);
-}
-
-.cards-featured .cards-featured-card-body {
-  margin: 16px;
-  color: var(--color-white-secondary);
-}
-
-.cards-featured .cards-featured-card-body strong {
-  color: var(--color-white);
-}
-
+/* Full-bleed image */
 .cards-featured .cards-featured-card-image {
+  position: absolute;
+  inset: 0;
   line-height: 0;
 }
 
-.cards-featured > ul > li img {
+.cards-featured .cards-featured-card-image picture {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+}
+
+.cards-featured .cards-featured-card-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+/* Dark gradient overlay — bottom half for text legibility */
+.cards-featured > ul > li::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 20%) 45%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Card body — overlaid at the bottom */
+.cards-featured .cards-featured-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Title */
+.cards-featured .cards-featured-card-body h1,
+.cards-featured .cards-featured-card-body h2,
+.cards-featured .cards-featured-card-body h3,
+.cards-featured .cards-featured-card-body h4,
+.cards-featured .cards-featured-card-body h5,
+.cards-featured .cards-featured-card-body h6,
+.cards-featured .cards-featured-card-body strong,
+.cards-featured .cards-featured-card-body p:not(:has(a)) {
+  color: var(--color-white);
+  font-size: var(--heading-font-size-l);
+  line-height: var(--heading-line-height-l);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* CTA link — frosted glass pill, self-centered */
+.cards-featured .cards-featured-card-body a {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--button-height);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  font-family: var(--font-family);
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: rgb(101 112 129 / 30%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-white);
+  box-shadow: none;
+  border: 0;
+  transition: background var(--transition-base);
+}
+
+.cards-featured .cards-featured-card-body a:hover {
+  background-color: rgb(101 112 129 / 50%);
+}
+
+/* Also handle btn-decorated links */
+.cards-featured .cards-featured-card-body a.btn {
+  align-self: center;
+  background-color: rgb(101 112 129 / 30%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-white);
+  box-shadow: none;
+  border: 0;
+}
+
+.cards-featured .cards-featured-card-body a.btn:hover {
+  background-color: rgb(101 112 129 / 50%);
+  box-shadow: none;
+}
+
+@media (width < 600px) {
+  .cards-featured > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 600px) and (width < 900px) {
+  .cards-featured > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -386,6 +386,27 @@ button:disabled:hover {
   }
 }
 
+.section:has(.hero-banner.offer),
+.section:has(.cards-featured),
+.section:has(.columns-teaser) {
+  padding: 56px 0;
+}
+
+/* Centered section: constrain body text and center button row */
+.section.center .default-content > p:not(.button-container) {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.section.center .default-content .button-container,
+.section.center .default-content p.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* Dark section (default Audi theme) */
 .section.dark {
   background-color: var(--color-black);
