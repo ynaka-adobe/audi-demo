@@ -392,6 +392,10 @@ button:disabled:hover {
   padding: 56px 0;
 }
 
+.section:has(.cards-model) {
+  padding-top: 56px;
+}
+
 /* Centered section: constrain body text and center button row */
 .section.center .default-content > p:not(.button-container) {
   max-width: 640px;

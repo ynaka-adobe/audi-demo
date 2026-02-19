@@ -49,6 +49,10 @@ export default function decorate(block) {
 
   block.textContent = '';
 
+  // --- Toolbar row (filters + nav on same line) ---
+  const toolbar = document.createElement('div');
+  toolbar.className = 'cards-model-toolbar';
+
   // --- Filter bar ---
   if (filterOrder.length > 0) {
     const filterBar = document.createElement('div');
@@ -68,7 +72,7 @@ export default function decorate(block) {
       filterBar.append(btn);
     });
 
-    block.append(filterBar);
+    toolbar.append(filterBar);
 
     filterBar.addEventListener('click', (e) => {
       const btn = e.target.closest('.cards-model-filter-btn');
@@ -89,7 +93,7 @@ export default function decorate(block) {
     });
   }
 
-  // --- Nav row (prev / next + count) ---
+  // --- Nav buttons ---
   const nav = document.createElement('div');
   nav.className = 'cards-model-nav';
 
@@ -105,7 +109,8 @@ export default function decorate(block) {
   nextBtn.innerHTML = NEXT_ICON;
 
   nav.append(prevBtn, nextBtn);
-  block.append(nav, ul);
+  toolbar.append(nav);
+  block.append(toolbar, ul);
 
   const getScrollAmount = () => {
     const card = ul.querySelector('li:not([hidden])');

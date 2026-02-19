@@ -82,6 +82,10 @@ header {
     display: none;
   }
 
+  .action-wrapper.toggle {
+    display: none;
+  }
+
   .menu,
   .mega-menu {
     padding-bottom: var(--spacing-m);

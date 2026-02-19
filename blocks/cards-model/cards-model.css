@@ -5,13 +5,23 @@
 }
 
 /* ========================================
+   Toolbar — filters + nav on the same row
+   ======================================== */
+.cards-model-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 24px 16px;
+}
+
+/* ========================================
    Filter bar
    ======================================== */
 .cards-model-filters {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 24px 16px;
+  flex: 1;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -67,14 +77,13 @@
 }
 
 /* ========================================
-   Nav row (prev / next arrows)
+   Nav buttons
    ======================================== */
 .cards-model-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 8px;
-  padding: 0 24px 16px;
+  flex-shrink: 0;
 }
 
 .cards-model-nav-btn {
@@ -188,8 +197,7 @@
    Responsive
    ======================================== */
 @media (width >= 900px) {
-  .cards-model-filters,
-  .cards-model-nav {
+  .cards-model-toolbar {
     padding-inline: 32px;
   }
 

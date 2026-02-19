@@ -5,7 +5,7 @@
 
 .hero-banner {
   position: relative;
-  padding: 48px 24px;
+  padding-top: 48px;
   min-height: 640px;
 }
 
@@ -164,6 +164,6 @@
 
 @media (width >= 900px) {
   .hero-banner {
-    padding: 80px 32px;
+    padding-top: 80px;
   }
 }
