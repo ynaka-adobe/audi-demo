@@ -1,0 +1,126 @@
+/* Cards block - Audi model card grid */
+.cards {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+}
+
+.cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (width >= 600px) {
+  .cards > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card item */
+.cards > ul > li {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-dark);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color var(--transition-duration) var(--audi-easing);
+  position: relative;
+}
+
+.cards > ul > li:hover {
+  border-color: var(--color-surface-medium);
+}
+
+/* Card link wrapper */
+.cards .cards-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cards .cards-card-link:hover {
+  text-decoration: none;
+}
+
+/* Card body */
+.cards .cards-card-body {
+  padding: 16px 16px 0;
+  order: -1;
+}
+
+.cards .cards-card-body p {
+  margin: 0;
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  color: var(--color-white-secondary);
+  line-height: 1.4;
+}
+
+.cards .cards-card-body p:first-child {
+  color: var(--color-white);
+  font-size: var(--body-font-size-m);
+}
+
+.cards .cards-card-body strong {
+  color: var(--color-white);
+}
+
+/* Card image */
+.cards .cards-card-image {
+  line-height: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards > ul > li img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+/* Card footer */
+.cards .cards-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+  margin-top: auto;
+}
+
+.cards .cards-card-footer p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  color: var(--color-white-secondary);
+}
+
+/* Chevron arrow */
+.cards .cards-card-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.cards .cards-card-arrow::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--color-white-secondary);
+  border-bottom: 1.5px solid var(--color-white-secondary);
+  transform: rotate(-45deg);
+  transition: border-color var(--transition-duration) var(--audi-easing);
+}
+
+.cards > ul > li:hover .cards-card-arrow::after {
+  border-color: var(--color-white);
+}
