@@ -61,13 +61,13 @@
      ======================================== */
 
   /* Fonts */
-  --font-family: AudiType, AudiType-fallback, sans-serif;
+  --font-family: auditype, auditype-fallback, sans-serif;
   --heading-font-family: var(--font-family);
 
   /* Heading sizes */
-  --heading-font-size-xxl: 44px;
-  --heading-font-size-xl: 36px;
-  --heading-font-size-l: 28px;
+  --heading-font-size-xxl: 50px;
+  --heading-font-size-xl: 46px;
+  --heading-font-size-l: 40px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
@@ -80,9 +80,9 @@
   --body-font-size-xs: 12px;
 
   /* Line heights */
-  --heading-line-height-xxl: 60px;
-  --heading-line-height-xl: 48px;
-  --heading-line-height-l: 40px;
+  --heading-line-height-xxl: 80px;
+  --heading-line-height-xl: 68px;
+  --heading-line-height-l: 60px;
   --heading-line-height-m: 36px;
   --heading-line-height-s: 32px;
   --heading-line-height-xs: 28px;
