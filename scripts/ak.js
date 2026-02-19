@@ -153,7 +153,7 @@ export function localizeUrl({ config, url }) {
   if (pathname.startsWith(`${locale.prefix}/`)) return null;
 
   const localized = Object.keys(locales).some(
-    (key) => key !== '' && pathname.startsWith(`${key}/`),
+    (key) => key !== '' && (pathname === key || pathname.startsWith(`${key}/`)),
   );
   if (localized) return null;
 
