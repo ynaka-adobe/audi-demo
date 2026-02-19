@@ -6,7 +6,7 @@
 .hero-banner {
   position: relative;
   padding: 48px 24px;
-  min-height: 300px;
+  min-height: 640px;
 }
 
 .hero-banner h1,
@@ -15,17 +15,17 @@
 .hero-banner h4,
 .hero-banner h5,
 .hero-banner h6 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1360px;
+  margin-left: 96px;
+  margin-right: 96px;
   color: var(--color-white);
   font-weight: 400;
 }
 
 .hero-banner p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1360px;
+  margin-left: 96px;
+  margin-right: 96px;
   color: var(--color-white-secondary);
 }
 

@@ -1,6 +1,6 @@
 /* Audi Type fallback font */
 @font-face {
-  font-family: auditype-fallback;
+  font-family: AudiType-fallback;
   size-adjust: 97%;
   src: local("Arial");
 }
@@ -61,7 +61,7 @@
      ======================================== */
 
   /* Fonts */
-  --font-family: auditype, auditype-fallback, sans-serif;
+  --font-family: AudiType, AudiType-fallback, sans-serif;
   --heading-font-family: var(--font-family);
 
   /* Heading sizes */
