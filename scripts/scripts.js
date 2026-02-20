@@ -38,6 +38,11 @@ export async function loadPage() {
   setConfig({ hostnames, locales, linkBlocks, components, decorateArea });
   await loadArea();
 }
+
+if (/\.(stage-ue|ue)\.da\.live$/.test(window.location.hostname)) {
+  import('../ue/scripts/ue.js').then(({ default: ue }) => ue());
+}
+
 await loadPage();
 
 (function da() {
