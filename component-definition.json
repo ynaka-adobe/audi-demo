@@ -1,0 +1,321 @@
+{
+  "groups": [
+    {
+      "title": "Default Content",
+      "id": "default",
+      "components": [
+        {
+          "title": "Text",
+          "id": "text",
+          "model": "text",
+          "plugins": {
+            "da": {
+              "name": "text",
+              "type": "text"
+            }
+          }
+        },
+        {
+          "title": "Image",
+          "id": "image",
+          "model": "image",
+          "plugins": {
+            "da": {
+              "name": "image",
+              "type": "image",
+              "fields": [
+                { "name": "imageAlt", "selector": "img[alt]" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sections",
+      "id": "sections",
+      "components": [
+        {
+          "title": "Section",
+          "id": "section",
+          "model": "section",
+          "filter": "section",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "&nbsp;"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Blocks",
+      "id": "blocks",
+      "components": [
+        {
+          "title": "Hero Banner",
+          "id": "hero-banner",
+          "model": "hero-banner",
+          "plugins": {
+            "da": {
+              "name": "hero-banner",
+              "rows": 2,
+              "columns": 1,
+              "fields": [
+                { "name": "backgroundImage", "selector": "div:nth-child(1)>div>picture>img[src]" },
+                { "name": "backgroundImageAlt", "selector": "div:nth-child(1)>div>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)>div" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Hero",
+          "id": "hero",
+          "model": "hero",
+          "plugins": {
+            "da": {
+              "name": "hero",
+              "rows": 2,
+              "columns": 1,
+              "fields": [
+                { "name": "backgroundImage", "selector": "div:nth-child(1)>div>picture>img[src]" },
+                { "name": "backgroundImageAlt", "selector": "div:nth-child(1)>div>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)>div" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Cards (Model)",
+          "id": "cards-model",
+          "model": "cards-model",
+          "filter": "cards-model",
+          "plugins": {
+            "da": {
+              "name": "cards-model",
+              "rows": 1,
+              "columns": 3
+            }
+          }
+        },
+        {
+          "title": "Cards Model Item",
+          "id": "cards-model-item",
+          "model": "cards-model-item",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 3,
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)" },
+                { "name": "filters", "selector": "div:nth-child(3)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Cards (Featured)",
+          "id": "cards-featured",
+          "model": "cards-featured",
+          "filter": "cards-featured",
+          "plugins": {
+            "da": {
+              "name": "cards-featured",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Cards Featured Item",
+          "id": "cards-featured-item",
+          "model": "cards-featured-item",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Card",
+          "id": "card",
+          "model": "card",
+          "plugins": {
+            "da": {
+              "name": "card",
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Columns",
+          "id": "columns",
+          "model": "columns",
+          "filter": "columns",
+          "plugins": {
+            "da": {
+              "name": "columns",
+              "rows": 1,
+              "columns": 2,
+              "behaviour": "columns"
+            }
+          }
+        },
+        {
+          "title": "Columns Row",
+          "id": "columns-row",
+          "model": "columns-row",
+          "filter": "columns-row",
+          "plugins": {
+            "da": {
+              "name": "columns-row",
+              "behaviour": "columns-row"
+            }
+          }
+        },
+        {
+          "title": "Columns Cell",
+          "id": "columns-cell",
+          "model": "columns-cell",
+          "filter": "columns-cell",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "&nbsp;",
+              "behaviour": "columns-cell"
+            }
+          }
+        },
+        {
+          "title": "Columns Teaser",
+          "id": "columns-teaser",
+          "model": "columns-teaser",
+          "plugins": {
+            "da": {
+              "name": "columns-teaser",
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Section Metadata",
+          "id": "section-metadata",
+          "model": "section-metadata",
+          "plugins": {
+            "da": {
+              "name": "section-metadata",
+              "type": "key-value-block"
+            }
+          }
+        },
+        {
+          "title": "Table",
+          "id": "table",
+          "model": "table",
+          "plugins": {
+            "da": {
+              "name": "table",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                { "name": "content", "selector": "div>div" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Advanced Tabs",
+          "id": "advanced-tabs",
+          "model": "advanced-tabs",
+          "filter": "advanced-tabs",
+          "plugins": {
+            "da": {
+              "name": "advanced-tabs",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Advanced Tabs Item",
+          "id": "advanced-tabs-item",
+          "model": "advanced-tabs-item",
+          "plugins": {
+            "da": {
+              "rows": 2,
+              "columns": 0,
+              "fields": [
+                { "name": "name", "selector": "div:nth-child(1)" },
+                { "name": "content", "selector": "div:nth-child(2)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "YouTube",
+          "id": "youtube",
+          "model": "youtube",
+          "plugins": {
+            "da": {
+              "name": "youtube",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                { "name": "url", "selector": "div>div>p>a[href]" },
+                { "name": "urlText", "selector": "div>div>p>a" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Fragment",
+          "id": "fragment",
+          "model": "fragment",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "&nbsp;Fragment URL&nbsp;",
+              "fields": [
+                { "name": "url", "selector": "div>div>p>a[href]" },
+                { "name": "urlText", "selector": "div>div>p>a" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Schedule",
+          "id": "schedule",
+          "model": "schedule",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "&nbsp;Schedule URL&nbsp;",
+              "fields": [
+                { "name": "url", "selector": "div>div>p>a[href]" },
+                { "name": "urlText", "selector": "div>div>p>a" }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

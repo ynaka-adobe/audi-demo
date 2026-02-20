@@ -1,0 +1,416 @@
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "robots",
+        "label": "Robots",
+        "description": "Index control via robots meta tag"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          { "name": "Dark", "value": "dark" },
+          { "name": "Light", "value": "light" },
+          { "name": "Highlight", "value": "highlight" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundImageAlt",
+        "label": "Background Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Foreground Content",
+        "valueType": "string",
+        "description": "Heading, subheading, and CTA buttons"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundImageAlt",
+        "label": "Background Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Foreground Content",
+        "valueType": "string",
+        "description": "Heading, detail text, and CTA buttons"
+      }
+    ]
+  },
+  {
+    "id": "cards-model",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Variants",
+        "options": [
+          { "name": "Dark", "value": "dark" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards-model-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "Model name, heading, and CTA link"
+      },
+      {
+        "component": "text",
+        "name": "filters",
+        "label": "Filters",
+        "valueType": "string",
+        "description": "Comma-separated filter values shown in the filter bar (e.g. Electric, SUV, Sedan)"
+      }
+    ]
+  },
+  {
+    "id": "cards-featured",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Variants",
+        "options": [
+          { "name": "Dark", "value": "dark" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards-featured-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "Heading and CTA link"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "Card body text and CTA link"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "columns",
+        "label": "Number of Columns",
+        "value": 2,
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "columns-teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "Heading, subheading, and CTA buttons"
+      }
+    ]
+  },
+  {
+    "id": "section-metadata",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          { "name": "Dark", "value": "dark" },
+          { "name": "Light", "value": "light" },
+          { "name": "Highlight", "value": "highlight" }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "background-color",
+        "label": "Background Color",
+        "description": "CSS color value or color token (e.g. color-token-brand-primary)"
+      },
+      {
+        "component": "reference",
+        "name": "background-image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "grid",
+        "label": "Grid"
+      },
+      {
+        "component": "text",
+        "name": "gap",
+        "label": "Gap"
+      },
+      {
+        "component": "text",
+        "name": "spacing",
+        "label": "Spacing"
+      },
+      {
+        "component": "text",
+        "name": "container",
+        "label": "Container"
+      },
+      {
+        "component": "text",
+        "name": "layout",
+        "label": "Layout"
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Table Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "advanced-tabs",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tabs",
+        "value": "",
+        "label": "Tab Labels",
+        "valueType": "string",
+        "description": "Unordered list of tab labels"
+      }
+    ]
+  },
+  {
+    "id": "advanced-tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Tab Name",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Tab Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "youtube",
+    "fields": [
+      {
+        "component": "text",
+        "name": "urlText",
+        "label": "YouTube URL Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "YouTube URL",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "text",
+        "name": "urlText",
+        "label": "Fragment URL Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Fragment URL",
+        "valueType": "string",
+        "required": true,
+        "description": "Path must start with /fragments/"
+      }
+    ]
+  },
+  {
+    "id": "schedule",
+    "fields": [
+      {
+        "component": "text",
+        "name": "urlText",
+        "label": "Schedule URL Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Schedule URL",
+        "valueType": "string",
+        "required": true,
+        "description": "Path must start with /schedules/"
+      }
+    ]
+  }
+]
