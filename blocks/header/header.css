@@ -138,7 +138,6 @@ header {
     .default-content {
       height: var(--header-height);
       display: flex;
-      justify-content: space-between;
 
       p,
       a {
@@ -381,3 +380,310 @@ header {
     }
   }
 }
+
+/* ========================================
+   DEALER HEADER (sections 1, 2, 3 + sticky bar)
+   ======================================== */
+
+header.dealer,
+header.header-dealer,
+header.dealer-header {
+  position: relative;
+  top: auto;
+  max-height: none;
+  min-height: 0;
+  overflow: visible;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+header.dealer .header-content,
+header.header-dealer .header-content,
+header.dealer-header .header-content {
+  margin: 0;
+  padding: 0;
+}
+
+/* Dealer header flush against top - remove body padding */
+body.has-dealer-header {
+  padding-top: 0;
+}
+
+/* Override base header constraints - dealer header must not be clipped */
+header.dealer,
+header.header-dealer,
+header.dealer-header {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* First section (contact) - black text, override header's white */
+header.dealer .dealer-contact-section,
+header.header-dealer .dealer-contact-section,
+header.dealer-header .dealer-contact-section {
+  color: #000 !important;
+}
+
+header.dealer .dealer-contact-section a,
+header.dealer .dealer-contact-section p,
+header.dealer .dealer-contact-section span,
+header.header-dealer .dealer-contact-section a,
+header.header-dealer .dealer-contact-section p,
+header.header-dealer .dealer-contact-section span,
+header.dealer-header .dealer-contact-section a,
+header.dealer-header .dealer-contact-section p,
+header.dealer-header .dealer-contact-section span {
+  color: #000 !important;
+}
+
+/* Second section (brand-nav) */
+header.dealer .dealer-brand-nav-section a,
+header.dealer .dealer-brand-nav-section p,
+header.dealer .dealer-brand-nav-section span,
+header.dealer .dealer-brand-nav-section .main-nav-link,
+header.header-dealer .dealer-brand-nav-section a,
+header.header-dealer .dealer-brand-nav-section p,
+header.header-dealer .dealer-brand-nav-section span,
+header.header-dealer .dealer-brand-nav-section .main-nav-link,
+header.dealer-header .dealer-brand-nav-section a,
+header.dealer-header .dealer-brand-nav-section p,
+header.dealer-header .dealer-brand-nav-section span,
+header.dealer-header .dealer-brand-nav-section .main-nav-link {
+  font-family: AudiType, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(102, 102, 102) !important;
+}
+
+header.dealer .header-content.dealer-layout,
+header.header-dealer .header-content.dealer-layout,
+header.dealer-header .header-content.dealer-layout {
+  --dealer-content-padding: var(--spacing-s);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 100%;
+  background-color: transparent;
+  overflow: visible;
+}
+
+/* Shared content alignment - logo aligns under Contact Us */
+.dealer-content-row {
+  box-sizing: border-box;
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--dealer-content-padding, var(--spacing-s));
+  padding-right: var(--dealer-content-padding, var(--spacing-s));
+}
+
+header.dealer .header-content.dealer-layout > .section,
+header.header-dealer .header-content.dealer-layout > .section,
+header.dealer-header .header-content.dealer-layout > .section {
+  flex-shrink: 0;
+}
+
+.dealer-contact-section {
+  grid-area: contact;
+  height: 57px;
+  width: 100vw;
+  margin: 0 0 0 calc(50% - 50vw);
+  padding: 0;
+  background-color: white;
+  border-bottom: 1px solid var(--color-gray-200);
+  color: #000 !important;
+  font-family: AudiType, sans-serif;
+
+  .default-content,
+  .block-content {
+    justify-content: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: var(--dealer-content-padding, var(--spacing-s));
+    padding-right: var(--dealer-content-padding, var(--spacing-s));
+    color: #000 !important;
+    font-family: AudiType, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-stretch: 105%;
+
+    a,
+    p,
+    span {
+      color: #000 !important;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #000 !important;
+      text-decoration: underline;
+    }
+  }
+}
+
+.dealer-brand-nav-section {
+  grid-area: brand-nav;
+  height: 72px;
+  width: 100vw;
+  margin: 0 0 0 calc(50% - 50vw);
+  padding: 0;
+  background-color: white;
+  border-bottom: 1px solid var(--color-gray-200);
+  font-family: AudiType, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(102, 102, 102);
+}
+
+.dealer-brand-nav-inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-l);
+  padding: 0 var(--spacing-s);
+  box-sizing: border-box;
+}
+
+.dealer-brand-nav-section .default-content,
+.dealer-brand-nav-section .block-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-l);
+  flex: 1;
+  min-width: 0;
+
+  a {
+    color: rgb(102, 102, 102);
+  }
+
+  svg path {
+    fill: currentColor;
+  }
+
+  .main-nav-list {
+    display: flex;
+    gap: var(--spacing-l);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-nav-link {
+    font-family: AudiType, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(102, 102, 102);
+  }
+}
+
+/* Dealer subnav section (row 3) - sticks at top when sections 1 & 2 scroll up, content scrolls underneath */
+.dealer-subnav-section {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 114px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: var(--color-black);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.dealer-subnav-section.is-stuck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+
+.dealer-subnav-section .default-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-s);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+  font-family: AudiType, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-stretch: 105%;
+  line-height: 60px;
+  color: rgb(179, 179, 179);
+}
+
+.dealer-subnav-section a {
+  color: rgb(179, 179, 179);
+  text-decoration: none;
+  padding-left: 0;
+  border-bottom: none;
+}
+
+.dealer-subnav-section a:hover {
+  color: var(--color-white);
+}
+
+.dealer-subnav-section .dealer-subnav-name {
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0 var(--spacing-s);
+  margin: 0;
+  line-height: 36px;
+}
+
+.dealer-subnav-section .dealer-subnav-name a {
+  color: inherit;
+}
+
+.dealer-subnav-section ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dealer-subnav-section li {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Dealer actions section (row 4) */
+header.dealer .header-content .actions-section,
+header.header-dealer .header-content .actions-section,
+header.dealer-header .header-content .actions-section {
+  height: 72px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: var(--color-black);
+  border-bottom: none;
+
+  .default-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-s);
+  }
+
+  .action-wrapper button {
+    color: var(--color-white);
+  }
+}
+

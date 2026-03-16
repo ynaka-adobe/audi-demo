@@ -22,6 +22,23 @@
         "name": "robots",
         "label": "Robots",
         "description": "Index control via robots meta tag"
+      },
+      {
+        "component": "select",
+        "name": "header",
+        "label": "Header",
+        "options": [
+          { "name": "Default", "value": "header" },
+          { "name": "Dealer", "value": "dealer" },
+          { "name": "Dealer Header", "value": "dealer-header" }
+        ],
+        "description": "Header style: Default or Dealer (with Contact Us)"
+      },
+      {
+        "component": "text",
+        "name": "dealer-phone",
+        "label": "Dealer Phone",
+        "description": "Phone number for Contact Us (dealer header only). E.g. 415-241-8100"
       }
     ]
   },
