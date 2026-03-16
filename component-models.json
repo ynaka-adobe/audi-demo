@@ -103,6 +103,14 @@
     "id": "hero",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Variants",
+        "options": [
+          { "name": "Dealer", "value": "dealer" }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "backgroundImage",

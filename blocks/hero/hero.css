@@ -7,6 +7,7 @@
   position: relative;
   color: var(--color-white);
   overflow: hidden;
+  margin-top: 175px;
 
   &.small {
     --min-height: 240px;
@@ -18,6 +19,10 @@
 
   &.full {
     --min-height: calc(100vh - var(--header-height));
+  }
+
+  &.dealer {
+    --min-height: 585px;
   }
 
   &.light {
